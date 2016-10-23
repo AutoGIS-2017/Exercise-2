@@ -15,9 +15,7 @@ This week we will practice how to ...
  - [Problem 1: ]()
  - [Problem 2: ]()
  
- Exercise-2: Using pandas and geopandas to work with spatial data.
-
-
+ 
 ## Problem 1
 
 
