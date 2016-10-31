@@ -62,5 +62,6 @@ This is an optional extra task for those who likes to learn even more. Write you
  - For each user, create LineString objects based on the points
  - Save the movements of each user into a separate Shapefile
    - Name the output Shapefile based on the userid number
+   
  
 
