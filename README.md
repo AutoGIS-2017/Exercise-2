@@ -12,9 +12,9 @@ This week we will focus on how to create geometries in Geopandas.
 
 ## Sections
 
- - [Problem 1: Create Polygon from lists of coordinates]()
- - [Problem 2: Points to map]()
- - [Problem 3: Movements of individual user (optional task for advanced students)]()
+ - [Problem 1: Create Polygon from lists of coordinates](#problem-1-create-polygon-from-lists-of-coordinates)
+ - [Problem 2: Points to map](#problem-2-points-to-map)
+ - [Problem 3: Movements of individual user (optional task for advanced students)](#problem-3-movements-of-individual-user-optional-task-for-advanced-students)
   
 ## Problem 1: Create Polygon from lists of coordinates
 
@@ -52,12 +52,12 @@ The data has 81379 rows and consists of locations and times of social media post
 *Note: although the data is based on real social media data, it is heavily anonymized. Userids and timestamps have been randomized, i.e. they do not not match with real ones, 
 also spatial accuracy of the data have been lowered.*
 
-- [Download the data]() 
+- [Download the data](https://github.com/Automating-GIS-processes/Exercise-2/raw/master/data/some_posts.csv) 
 - Read the data into memory 
-  - You can use numpy but recommendable way is to read it directly with Pandas into a DataFrame, [read hints]() how to do it.
+  - You can use numpy but recommendable way is to read it directly with Pandas into a DataFrame, [read hints](https://github.com/Automating-GIS-processes/Lesson-2-Geo-DataFrames/blob/master/Lesson/Hints-Exercise-2.md) how to do it.
 - Create an empty column called `geometry` where you will store shapely Point objects
-- Iterate over the rows of the DataFrame and insert Point objects into column geometry (you need to use .loc indexer to update the row, [see materials]() 
-- Convert that DataFrame into a GeoDataFrame, [see hints]()
+- Iterate over the rows of the DataFrame and insert Point objects into column geometry (you need to use .loc indexer to update the row, [see materials](https://github.com/Automating-GIS-processes/Lesson-2-Geo-DataFrames/blob/master/Lesson/pandas-geopandas.md#creating-geometries-into-geodataframe) 
+- Convert that DataFrame into a GeoDataFrame, [see hints](https://github.com/Automating-GIS-processes/Lesson-2-Geo-DataFrames/blob/master/Lesson/Hints-Exercise-2.md)
 - Update the CRS for coordinate system as WGS84 (i.e. epsg code: 4326)
 - Save the data into a Shapefile called `Kruger_posts.shp`
 - Create a simple map of those points using either QGIS installed in the computer instance or using `.plot()` -funtion in Python. Save it to GitHub as png file. 
