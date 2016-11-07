@@ -52,7 +52,7 @@ The data has 81379 rows and consists of locations and times of social media post
 *Note: although the data is based on real social media data, it is heavily anonymized. Userids and timestamps have been randomized, i.e. they do not not match with real ones, 
 also spatial accuracy of the data have been lowered.*
 
-- [Download the data](https://raw.githubusercontent.com/Automating-GIS-processes/Exercise-2/master/data/some_posts.csv?token=AGWdzhgsQbNFI3lk6a5GxrjguPnmuhwoks5YKVWrwA%3D%3D) (right click..save as..) 
+- [Download the data](https://raw.githubusercontent.com/Automating-GIS-processes/Exercise-2/master/data/some_posts.csv?token=AGWdzhgsQbNFI3lk6a5GxrjguPnmuhwoks5YKVWrwA%3D%3D) (Click on the link ==> CNTRL + S)  
 - Read the data into memory 
   - You can use numpy but recommendable way is to read it directly with Pandas into a DataFrame, [read hints](https://github.com/Automating-GIS-processes/Lesson-2-Geo-DataFrames/blob/master/Lesson/Hints-Exercise-2.md) how to do it.
 - Create an empty column called `geometry` where you will store shapely Point objects
