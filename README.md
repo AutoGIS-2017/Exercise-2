@@ -68,8 +68,11 @@ This is an optional extra task for those who likes to learn even more. Write you
 
  - Group the data by userid
  - Create an empty GeoDataFrame
- - For each user, create LineString objects based on the points, add the geometry and the userid into the GeoDataFrame you created in the last step
- - Determine the CRS of GeoDataFrame to WGS84 (epsg code: 4326)
+ - For each user: 
+    - sort the rows by timestamp 
+    - create LineString objects based on the points
+    - add the geometry and the userid into the GeoDataFrame you created in the last step
+ - Determine the CRS of your GeoDataFrame to WGS84 (epsg code: 4326)
  - Save the movements of each user into a separate Shapefile
    - Name the output Shapefile based on the userid number
    
