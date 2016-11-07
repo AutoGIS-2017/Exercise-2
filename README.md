@@ -1,6 +1,6 @@
-# Exercise-2
+# Exercise 2
 
-This week we will practice how to ...
+This week we will focus on how to create geometries in Geopandas.
 
 ### Due dates
  
@@ -12,27 +12,35 @@ This week we will practice how to ...
 
 ## Sections
 
- - [Problem 1: ]()
- - [Problem 2: ]()
- 
- 
-## Problem 1: 
+ - [Problem 1: Create Polygon from lists of coordinates]()
+ - [Problem 2: Points to map]()
+ - [Problem 3: Movements of individual user (optional task for advanced students)]()
+  
+## Problem 1: Create Polygon from lists of coordinates
 
-Something easy.
+In the first problem you should: 
+ - create a Polygon out of the the x and y coordinates that are provided in the `create_polygon.py` -script. 
+ - insert the polygon into a GeoDataFrame 
+ - save the Polygon into a Shapefile. 
+ - plot and save a figure out of the Polygon. 
  
- - Create a polygon based on the points that are provided in the DUMMY-script and insert it into a GeoDataFrame that should be imported into a Shapefile
- - Plot the polygon using `data.plot()` -function and save it as png file that should be uploaded to GitHub
- - What does the figure represent?
+The [**create_polygon.py**](create_polygon.py) starter script has all necessary steps listed and also some hints are provided. There are all together 6 steps that you need to fill to accomplish
+the problem 1. Each step that you need to fill is marked with capital P -letter (P1 to P6).  
 
 ## Problem 2: Points to map
  
 The problem 2 this week continues the process that we started last week, i.e. creating geometric point -objects and putting them into a map. 
-Here our aim is to plot a set of x and y coordinates that we should read from a text file that contains following kind of data:
+Here our aim is to plot a set of x and y coordinates that we should read from a `some_posts.csv` comma separated file that contains following kind of data:
  
 ```
+lat,lon,timestamp,userid
+-24.980792492,31.484633302,2015-07-07 03:02,66487960
+-25.499224667,31.508905612,2015-07-07 03:18,65281761
+-24.342578456,30.930866066,2015-03-07 03:38,90916112
+-24.85461393,31.519718439,2015-10-07 05:04,37959089
 ```
 
-The data consists of locations and times of social media posts inside Kruger national park in South Africa:
+The data has 81379 rows and consists of locations and times of social media posts inside Kruger national park in South Africa:
 
 | Column | Description |
 |--------|-------------|
@@ -41,10 +49,10 @@ The data consists of locations and times of social media posts inside Kruger nat
 | timestamp | Time when the post was uploaded |
 | userid | userid |
 
-*Note: although the data is based on real social media data, it is heavily anonymized. Userids are random numbers that does not match with real ones, also timestamps 
-have been modified.*
+*Note: although the data is based on real social media data, it is heavily anonymized. Userids and timestamps have been randomized, i.e. they do not not match with real ones, 
+also spatial accuracy of the data have been lowered.*
 
-- Download the data 
+- [Download the data]() 
 - Read the data into memory 
   - You can use numpy but recommendable way is to read it directly with Pandas into a DataFrame, [read hints]() how to do it.
 - Create an empty column called `geometry` where you will store shapely Point objects
