@@ -67,7 +67,9 @@ also spatial accuracy of the data have been lowered.*
 This is an optional extra task for those who likes to learn even more. Write your codes into the same file as in previous Problem (2).
 
  - Group the data by userid
- - For each user, create LineString objects based on the points
+ - Create an empty GeoDataFrame
+ - For each user, create LineString objects based on the points, add the geometry and the userid into the GeoDataFrame you created in the last step
+ - Determine the CRS of GeoDataFrame to WGS84 (epsg code: 4326)
  - Save the movements of each user into a separate Shapefile
    - Name the output Shapefile based on the userid number
    
