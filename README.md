@@ -1,22 +1,21 @@
 # Exercise 2
 
-This week we will focus on how to create geometries in Geopandas.
+This week we will focus on how to create geometries in Geopandas and how to re-project data and do some basic
+geometric calculations.
 
-### Due dates
- 
- - 100 % of point total if you return your solution within 1 week (due date 14.11.2016) 
- - 85 % of point total if your return your solution within 2 weeks (due date 21.11.2016)
-   - Detailed hints provided
- - 50 % of point total if you return your solution within 3 weeks (due date 28.11.2016)
-   - Full solution provided
+- **Exercise 1 is due by the start of lecture on 13.11**.
+
+- Don't forget to check out the [hints for this week's exercise](https://automating-gis-processes.github.io/2017/lessons/L2/exercise-2-hints.html) if you're having trouble.
+
+- Scores on this exercise are out of **20 points**.
 
 ## Sections
 
  - [Problem 1: Create Polygon from lists of coordinates](#problem-1-create-polygon-from-lists-of-coordinates)
  - [Problem 2: Points to map](#problem-2-points-to-map)
- - [Problem 3: Movements of individual user (optional task for advanced students)](#problem-3-movements-of-individual-user-optional-task-for-advanced-students)
+ - [Problem 3: How long distance individuals have travelled?](#problem-3-movements-of-individual-user)
   
-## Problem 1: Create Polygon from lists of coordinates
+## Problem 1: Create Polygon from lists of coordinates (6 points)
 
 In the first problem you should: 
  - create a Polygon out of the the x and y coordinates that are provided in the `create_polygon.py` -script. 
@@ -27,7 +26,7 @@ In the first problem you should:
 The [**create_polygon.py**](create_polygon.py) starter script has all necessary steps listed and also some hints are provided. There are all together 6 steps that you need to fill to accomplish
 the problem 1. Each step that you need to fill is marked with capital P -letter (P1 to P6).  
 
-## Problem 2: Points to map
+## Problem 2: Points to map (6 points)
  
 The problem 2 this week continues the process that we started last week, i.e. creating geometric point -objects and putting them into a map. 
 Here our aim is to plot a set of x and y coordinates that we should read from a `some_posts.csv` comma separated file that contains following kind of data:
@@ -60,21 +59,37 @@ also spatial accuracy of the data have been lowered.*
 - Convert that DataFrame into a GeoDataFrame, [see hints](https://github.com/Automating-GIS-processes/Lesson-2-Geo-DataFrames/blob/master/Lesson/Hints-Exercise-2.md)
 - Update the CRS for coordinate system as WGS84 (i.e. epsg code: 4326)
 - Save the data into a Shapefile called `Kruger_posts.shp`
-- Create a simple map of those points using either QGIS installed in the computer instance or using `.plot()` -funtion in Python. Save it to GitHub as png file. 
+- Create a simple map of those points using a GIS software or using `.plot()` -funtion in Python. Save it to GitHub as png file.
 
-## Problem 3: Movements of individual user (optional task for advanced students)
+## Problem 3: How long distance individuals have travelled? (8 points)
 
-This is an optional extra task for those who likes to learn even more. Write your codes into the same file as in previous Problem (2).
+In this problem the aim is to calculate the distance in meters that the individuals have travelled according the social
+media posts (Euclidian distances between points).
 
+Write your codes into the same file as in previous Problem (2).
+
+In your code you should:
+
+ - Reproject the data from WGS84 projection into ``EPSG:32735`` -projection which stands for UTM Zone 35S (UTM zone for South Africa) to transform the data into metric system.
  - Group the data by userid
- - Create an empty GeoDataFrame
+ - Create an empty GeoDataFrame called ``movements``
  - For each user: 
     - [sort](http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.sort_values.html) the rows by timestamp 
     - create LineString objects based on the points
     - [add](http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.append.html) the geometry and the userid into the GeoDataFrame you created in the last step
- - Determine the CRS of your GeoDataFrame to WGS84 (epsg code: 4326)
- - Save the movements of each user into a separate Shapefile
-   - Name the output Shapefile based on the userid number
+ - Determine the CRS of the ``movements`` GeoDataFrame to ``EPSG:32735`` (epsg code: 32735)
+ - Calculate the lenghts of the lines into a new column called ``distance`` in ``movements`` GeoDataFrame.
+ - Save the movements of into a Shapefile called ``Some_movements.shp``
+
+### Questions
+
+Write your answers below the questions. You should also print in your code the answers to the questions.
+
+ - What was the shortest distance travelled in meters?
+ - What was the mean distance travelled in meters?
+ - What was the maximum distance travelled in meters?
+
+
    
  
 
