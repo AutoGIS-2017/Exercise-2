@@ -55,7 +55,7 @@ also spatial accuracy of the data have been lowered.*
 - Read the data into memory using Pandas
 - Create an empty column called `geometry` where you will store shapely Point objects
 - Iterate over the rows of the DataFrame and insert Point objects into column geometry (you need to use .loc indexer to update the row, [see materials](https://automating-gis-processes.github.io/2017/docs/lessons/L2/geopandas-basics.html#creating-geometries-into-a-geodataframe)
-- Convert that DataFrame into a GeoDataFrame, [see hints](https://github.com/Automating-GIS-processes/Lesson-2-Geo-DataFrames/blob/master/Lesson/Hints-Exercise-2.md)
+- Convert that DataFrame into a GeoDataFrame, [see hints](https://automating-gis-processes.github.io/2017/lessons/L2/exercise-2-hints.html)
 - Update the CRS for coordinate system as WGS84 (i.e. epsg code: 4326)
 - Save the data into a Shapefile called `Kruger_posts.shp`
 - Create a simple map of those points using a GIS software or using `.plot()` -funtion in Python. Save it to GitHub as png file.
