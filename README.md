@@ -51,11 +51,10 @@ The data has 81379 rows and consists of locations and times of social media post
 *Note: although the data is based on real social media data, it is heavily anonymized. Userids and timestamps have been randomized, i.e. they do not not match with real ones, 
 also spatial accuracy of the data have been lowered.*
 
-- [Download the data](https://raw.githubusercontent.com/Automating-GIS-processes/Exercise-2/master/data/some_posts.csv?token=AGWdzhgsQbNFI3lk6a5GxrjguPnmuhwoks5YKVWrwA%3D%3D) (Click on the link ==> CNTRL + S)  
-- Read the data into memory 
-  - You can use numpy but recommendable way is to read it directly with Pandas into a DataFrame, [read hints](https://github.com/Automating-GIS-processes/Lesson-2-Geo-DataFrames/blob/master/Lesson/Hints-Exercise-2.md) how to do it.
+- [Download the data](https://raw.githubusercontent.com/AutoGIS-2017/Exercise-2/master/data/some_posts.csv?token=AGWdzhgsQbNFI3lk6a5GxrjguPnmuhwoks5YKVWrwA%3D%3D) (Click on the link ==> CNTRL + S)
+- Read the data into memory using Pandas
 - Create an empty column called `geometry` where you will store shapely Point objects
-- Iterate over the rows of the DataFrame and insert Point objects into column geometry (you need to use .loc indexer to update the row, [see materials](https://github.com/Automating-GIS-processes/Lesson-2-Geo-DataFrames/blob/master/Lesson/pandas-geopandas.md#creating-geometries-into-geodataframe) 
+- Iterate over the rows of the DataFrame and insert Point objects into column geometry (you need to use .loc indexer to update the row, [see materials](https://automating-gis-processes.github.io/2017/docs/lessons/L2/geopandas-basics.html#creating-geometries-into-a-geodataframe)
 - Convert that DataFrame into a GeoDataFrame, [see hints](https://github.com/Automating-GIS-processes/Lesson-2-Geo-DataFrames/blob/master/Lesson/Hints-Exercise-2.md)
 - Update the CRS for coordinate system as WGS84 (i.e. epsg code: 4326)
 - Save the data into a Shapefile called `Kruger_posts.shp`
@@ -89,7 +88,5 @@ Write your answers below the questions. You should also print in your code the a
  - What was the mean distance travelled in meters?
  - What was the maximum distance travelled in meters?
 
-
-   
  
 
