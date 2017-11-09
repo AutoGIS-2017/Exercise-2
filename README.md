@@ -3,7 +3,7 @@
 This week we will focus on how to create geometries in Geopandas and how to re-project data and do some basic
 geometric calculations.
 
-- **Exercise 1 is due by the start of lecture on 13.11**.
+- **Exercise 2 is due by the start of lecture on 20.11**.
 
 - Don't forget to check out the [hints for this week's exercise](https://automating-gis-processes.github.io/2017/lessons/L2/exercise-2-hints.html) if you're having trouble.
 
